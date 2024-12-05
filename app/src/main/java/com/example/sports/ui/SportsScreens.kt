@@ -97,8 +97,10 @@ fun SportsApp(
                 SportsList(
                     sports = uiState.sportsList,
                     onClick = {
-                        viewModel.updateCurrentSport(it)
-                        viewModel.navigateToDetailPage()
+                        viewModel.apply {
+                            updateCurrentSport(it)
+                            navigateToDetailPage()
+                        }
                     },
                     modifier = Modifier.padding(horizontal = dimensionResource(R.dimen.padding_medium)),
                     contentPadding = innerPadding,
