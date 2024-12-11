@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Sports</string>
     <!-- Strings used for fragments for navigation -->
@@ -16,32 +17,32 @@
     <string name="table_tennis">Table Tennis</string>
     <string name="tennis">Tennis</string>
 
-    <string name="sports_list_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices congue rutrum.</string>
+    <string name="sports_list_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Present ult rices tongue rut rum.</string>
     <string name="sport_detail_text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Praesent ultrices congue rutrum. Phasellus elementum ipsum ac convallis aliquam. Suspendisse
-        eleifend eros a enim faucibus mollis. Nunc placerat, est vitae vestibulum blandit, dolor
-        diam fringilla tellus, eu euismod mauris neque at neque.
+        Present ult rices tongue rut rum. Phallus elementum ipsum ac collision aliquot. Suspense
+        effendi eros a enum faucets mollies. Nun placer, est vitae vestibule bandit, dolor
+        diam flavoring tells, eu modernism Nauris deque at deque.
         \n\n
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Praesent ultrices congue rutrum. Phasellus elementum ipsum ac convallis aliquam. Suspendisse
-        eleifend eros a enim faucibus mollis. Nunc placerat, est vitae vestibulum blandit, dolor
-        diam fringilla tellus, eu euismod mauris neque at neque.
+        Present ult rices tongue rut rum. Phallus elementum ipsum ac collision aliquot. Suspense
+        effendi eros a enum faucets mollies. Nun placer, est vitae vestibule bandit, dolor
+        diam flavoring tells, eu modernism Nauris deque at deque.
         \n\n
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Praesent ultrices congue rutrum. Phasellus elementum ipsum ac convallis aliquam. Suspendisse
-        eleifend eros a enim faucibus mollis. Nunc placerat, est vitae vestibulum blandit, dolor
-        diam fringilla tellus, eu euismod mauris neque at neque.
+        Present ult rices tongue rut rum. Phallus elementum ipsum ac collision aliquot. Suspense
+        effendi eros a enum faucets mollies. Nun placer, est vitae vestibule bandit, dolor
+        diam flavoring tells, eu modernism Nauris deque at deque.
         \n\n
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Praesent ultrices congue rutrum. Phasellus elementum ipsum ac convallis aliquam. Suspendisse
-        eleifend eros a enim faucibus mollis. Nunc placerat, est vitae vestibulum blandit, dolor
-        diam fringilla tellus, eu euismod mauris neque at neque.
+        Present ult rices tongue rut rum. Phallus elementum ipsum ac collision aliquot. Suspense
+        effendi eros a enum faucets mollies. Nun placer, est vitae vestibule bandit, dolor
+        diam flavoring tells, eu modernism Nauris deque at deque.
         \n\n
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Praesent ultrices congue rutrum. Phasellus elementum ipsum ac convallis aliquam. Suspendisse
-        eleifend eros a enim faucibus mollis. Nunc placerat, est vitae vestibulum blandit, dolor
-        diam fringilla tellus, eu euismod mauris neque at neque.
+        Present ult rices tongue rut rum. Phallus elementum ipsum ac collision aliquot. Suspense
+        effendi eros a enum faucets mollies. Nun placer, est vitae vestibule bandit, dolor
+        diam flavoring tells, eu modernism Nauris deque at deque.
     </string>
 
     <plurals name="player_count_caption">
