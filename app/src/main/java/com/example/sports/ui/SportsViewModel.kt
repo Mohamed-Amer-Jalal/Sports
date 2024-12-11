@@ -20,27 +20,16 @@ class SportsViewModel : ViewModel() {
     )
     val uiState: StateFlow<SportsUiState> = _uiState.asStateFlow()
 
-    fun updateCurrentSport(selectedSport: Sport) {
-        _uiState.update {
-            it.copy(currentSport = selectedSport)
-        }
-    }
+    fun updateCurrentSport(selectedSport: Sport) =
+        _uiState.update { it.copy(currentSport = selectedSport) }
 
-    fun navigateToListPage() {
-        _uiState.update {
-            it.copy(isShowingListPage = true)
-        }
-    }
+    fun navigateToListPage() = _uiState.update { it.copy(isShowingListPage = true) }
 
-    fun navigateToDetailPage() {
-        _uiState.update {
-            it.copy(isShowingListPage = false)
-        }
-    }
+    fun navigateToDetailPage() = _uiState.update { it.copy(isShowingListPage = false) }
 }
 
 data class SportsUiState(
     val sportsList: List<Sport> = emptyList(),
     val currentSport: Sport = LocalSportsDataProvider.defaultSport,
-    val isShowingListPage: Boolean = true
+    val isShowingListPage: Boolean = true,
 )

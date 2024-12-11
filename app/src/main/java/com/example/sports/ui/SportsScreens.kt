@@ -61,13 +61,11 @@ import com.example.sports.utils.SportsContentType
 fun SportsApp(
     windowSize: WindowWidthSizeClass,
     onBackPressed: () -> Unit,
-    viewModel: SportsViewModel = viewModel()
+    viewModel: SportsViewModel = viewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val contentType = when (windowSize) {
-        WindowWidthSizeClass.Compact,
-        WindowWidthSizeClass.Medium -> SportsContentType.ListOnly
-
+        WindowWidthSizeClass.Compact, WindowWidthSizeClass.Medium -> SportsContentType.ListOnly
         WindowWidthSizeClass.Expanded -> SportsContentType.ListAndDetail
         else -> SportsContentType.ListOnly
     }
@@ -85,9 +83,7 @@ fun SportsApp(
             SportsListAndDetail(
                 sports = uiState.sportsList,
                 selectedSport = uiState.currentSport,
-                onClick = {
-                    viewModel.updateCurrentSport(it)
-                },
+                onClick = { viewModel.updateCurrentSport(it) },
                 onBackPressed = onBackPressed,
                 contentPadding = innerPadding,
                 modifier = Modifier.fillMaxWidth()
@@ -109,9 +105,7 @@ fun SportsApp(
                 SportsDetail(
                     selectedSport = uiState.currentSport,
                     contentPadding = innerPadding,
-                    onBackPressed = {
-                        viewModel.navigateToListPage()
-                    }
+                    onBackPressed = { viewModel.navigateToListPage() }
                 )
             }
         }
@@ -124,7 +118,7 @@ fun SportsAppBar(
     onBackButtonClick: () -> Unit,
     isShowingListPage: Boolean,
     windowSize: WindowWidthSizeClass,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     val isShowingDetailPage = windowSize != WindowWidthSizeClass.Expanded && !isShowingListPage
     TopAppBar(
@@ -136,17 +130,15 @@ fun SportsAppBar(
                 fontWeight = FontWeight.Bold
             )
         },
-        navigationIcon = if (isShowingDetailPage) {
-            {
+        navigationIcon = {
+            if (isShowingDetailPage)
                 IconButton(onClick = onBackButtonClick) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = stringResource(R.string.back_button)
                     )
                 }
-            }
-        } else {
-            { Box {} }
+            else Box {}
         },
         colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.primary),
         modifier = modifier,
@@ -158,7 +150,7 @@ fun SportsAppBar(
 private fun SportsListItem(
     sport: Sport,
     onItemClick: (Sport) -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     Card(
         elevation = CardDefaults.cardElevation(),
@@ -256,7 +248,7 @@ private fun SportsDetail(
     selectedSport: Sport,
     onBackPressed: () -> Unit,
     contentPadding: PaddingValues,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     BackHandler { onBackPressed() }
     val scrollState = rememberScrollState()
@@ -344,15 +336,11 @@ private fun SportsListAndDetail(
     modifier: Modifier = Modifier,
     contentPadding: PaddingValues = PaddingValues(0.dp),
 ) {
-    Row(
-        modifier = modifier
-    ) {
+    Row(modifier = modifier) {
         SportsList(
             sports = sports,
             onClick = onClick,
-            contentPadding = PaddingValues(
-                top = contentPadding.calculateTopPadding(),
-            ),
+            contentPadding = PaddingValues(top = contentPadding.calculateTopPadding()),
             modifier = Modifier
                 .weight(2f)
                 .padding(horizontal = dimensionResource(R.dimen.padding_medium))
@@ -360,9 +348,7 @@ private fun SportsListAndDetail(
         SportsDetail(
             selectedSport = selectedSport,
             modifier = Modifier.weight(3f),
-            contentPadding = PaddingValues(
-                top = contentPadding.calculateTopPadding(),
-            ),
+            contentPadding = PaddingValues(top = contentPadding.calculateTopPadding()),
             onBackPressed = onBackPressed,
         )
     }

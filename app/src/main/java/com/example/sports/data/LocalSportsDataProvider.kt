@@ -3,7 +3,6 @@ package com.example.sports.data
 import com.example.sports.R
 import com.example.sports.model.Sport
 
-
 object LocalSportsDataProvider{
     val defaultSport = getSportsData()[0]
 
